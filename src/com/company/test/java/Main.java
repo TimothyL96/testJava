@@ -76,7 +76,65 @@ public class Main {
 	// New method
     public static void Test() {
 	    System.out.println("test!!!");
+	    la l = new la();
+	    l.Test();
     }
 }
 
 // Java OOP
+class la {
+	la() {
+		System.out.println("la created!");
+	}
+
+	// New method
+	public void Test() {
+		System.out.println("test!!!");
+		la l;
+	}
+}
+
+// Inheritance
+class la2 extends la {
+	int x;
+	la l; // Composition
+
+	la2() {
+		this.Test();
+	}
+}
+
+// Abstract class
+abstract class cabstract {
+	public abstract void abstractMethod();
+
+	void testCall() {
+		System.out.println("yeah");
+
+		// Test interface
+		Bike b = new Honda();
+		b.Start();
+	}
+}
+
+// Interface
+interface Bike {
+	public void Start();
+}
+
+interface Car {
+	public void Start();
+}
+
+// Extend first, only then implement
+class Honda extends cabstract implements Bike, Car {
+	public void Start(){
+		System.out.println("Honda car!");
+	}
+
+	// Override abstract method
+	@Override
+	public void abstractMethod() {
+
+	}
+}
