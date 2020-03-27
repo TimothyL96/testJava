@@ -1,6 +1,7 @@
 package com.company.test.java;
 
 import java.util.*;
+import java.lang.*;
 
 public class Main {
 
@@ -100,14 +101,13 @@ class la {
 class la2 extends la {
 	int x;
 	la l; // Composition
-
 	la2() {
 		this.Test();
 	}
 }
 
 // Abstract class
-abstract class cabstract {
+abstract class cabstand {
 	public abstract void abstractMethod();
 
 	void testCall() {
